@@ -12,6 +12,11 @@ import { limitDto, pageDto } from "./dtos/pagination.dto";
 export class UsersController {
     constructor(private readonly usersService: UsersService) {}
 
+    @Get()
+    endpointPrueba(){
+        return "Respuesta de prueba"
+    }
+
     @ApiBearerAuth()
     @Get()
     @Roles(Role.Admin)
